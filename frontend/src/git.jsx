@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./Git.css";
+import "./git.css";
 
 function Git() {
     const [projectPath, setProjectPath] = useState("");
