@@ -27,7 +27,7 @@ setTimeout(() => {
 setTimeout(() => {
     log("warn", "Test événement : ceci est un avertissement");
 }, 6000);
-app.use("/api/Projects", projectsRouter)
+app.use("/api/projects", projectsRouter)
 app.use("/api/docker", dockerRouter)
 app.use("/api/git", gitRouter)
 app.use("/api/database", databaseRouter)
