@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import Projects from "./Projects";
 import Docker from "./Docker";
-import Git from "./Git";
+import Git from "./git";
 import Database from "./Database";
 import Logs from "./Logs";
 import GlobalTerminal from "./GlobalTerminal";
