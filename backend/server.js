@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const projectsRouter = require("./projects")
+const projectsRouter = require("./Projects")
 const dockerRouter = require("./docker");
 const gitRouter = require("./git");
 const databaseRouter = require("./database");
