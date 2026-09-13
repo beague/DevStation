@@ -1,0 +1,171 @@
+.global-terminal-page {
+    height: 100%;
+    padding: 30px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.global-terminal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+.global-terminal-header h1 {
+    margin: 0;
+
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.global-terminal-header p {
+    margin: 6px 0 0;
+
+    color: #8b90a0;
+    font-size: 14px;
+}
+
+.global-terminal-clear {
+    border: 1px solid #292d38;
+
+    background: #181b24;
+    color: #ffffff;
+
+    padding: 9px 14px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+}
+
+.global-terminal-clear:hover {
+    background: #252a35;
+}
+
+.global-terminal-window {
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #080a0f;
+
+    border: 1px solid #252936;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    font-family:
+        "Cascadia Code",
+        Consolas,
+        "Courier New",
+        monospace;
+}
+
+.global-terminal-output {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding: 18px;
+
+    color: #d5d8e0;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+}
+
+.global-terminal-line {
+    min-height: 21px;
+}
+
+.global-terminal-info {
+    color: #8b90a0;
+}
+
+.global-terminal-command {
+    color: #ffffff;
+
+    font-weight: 600;
+}
+
+.global-terminal-output {
+    color: #d5d8e0;
+}
+
+.global-terminal-error {
+    color: #e57373;
+}
+
+.global-terminal-input {
+    height: 45px;
+    min-height: 45px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 0 18px;
+
+    border-top: 1px solid #252936;
+
+    background: #0d0f14;
+}
+
+.global-terminal-input span {
+    color: #7db7ff;
+
+    font-weight: bold;
+
+    font-family:
+        "Cascadia Code",
+        Consolas,
+        monospace;
+}
+
+.global-terminal-input input {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffffff;
+
+    font-family:
+        "Cascadia Code",
+        Consolas,
+        monospace;
+
+    font-size: 13px;
+}
+
+.global-terminal-input input::placeholder {
+    color: #555d6d;
+}
+
+.global-terminal-output::-webkit-scrollbar {
+    width: 8px;
+}
+
+.global-terminal-output::-webkit-scrollbar-track {
+    background: #080a0f;
+}
+
+.global-terminal-output::-webkit-scrollbar-thumb {
+    background: #292d38;
+    border-radius: 5px;
+}

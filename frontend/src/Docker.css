@@ -1,0 +1,254 @@
+.docker-page {
+    padding: 30px;
+    color: #ffffff;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.docker-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.docker-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.docker-header p {
+    margin-top: 8px;
+    color: #8b92a5;
+    font-size: 15px;
+}
+
+.docker-header > button {
+    border: 1px solid #2d3342;
+    background: #181c26;
+    color: #ffffff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.docker-header > button:hover {
+    background: #242a37;
+}
+
+.docker-section {
+    background: #12151d;
+    border: 1px solid #252a36;
+    border-radius: 14px;
+    padding: 24px;
+}
+
+.docker-section h2 {
+    margin: 0 0 20px 0;
+    font-size: 19px;
+}
+
+.docker-containers {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(330px, 1fr)
+    );
+    gap: 16px;
+}
+
+.docker-container {
+    background: #181c25;
+    border: 1px solid #292f3d;
+    border-radius: 12px;
+    padding: 18px;
+    transition: 0.2s;
+}
+
+.docker-container:hover {
+    border-color: #3b4354;
+    transform: translateY(-2px);
+}
+
+.container-name {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 17px;
+    margin-bottom: 12px;
+}
+
+.container-name strong {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.container-info p {
+    margin: 7px 0;
+    color: #9ba3b5;
+    font-size: 13px;
+}
+
+.container-info p:first-of-type {
+    color: #c7cbd5;
+}
+
+.container-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 15px;
+    border-top: 1px solid #292f3d;
+}
+
+.container-actions button {
+    border: 1px solid #303746;
+    background: #202531;
+    color: #ffffff;
+    padding: 8px 11px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.2s;
+}
+
+.container-actions button:hover {
+    background: #2c3341;
+}
+
+.container-actions button:last-child {
+    margin-left: auto;
+}
+
+.docker-container:has(.container-name span:first-child) {
+    position: relative;
+}
+
+@media (max-width: 700px) {
+    .docker-page {
+        padding: 18px;
+    }
+
+    .docker-header {
+        align-items: flex-start;
+        gap: 15px;
+        flex-direction: column;
+    }
+
+    .docker-containers {
+        grid-template-columns: 1fr;
+    }
+}
+
+.docker-images {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(280px, 1fr)
+    );
+    gap: 12px;
+}
+
+.docker-image {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    background: #181c25;
+    border: 1px solid #292f3d;
+    border-radius: 10px;
+
+    padding: 15px;
+
+    transition: 0.2s;
+}
+
+.docker-image:hover {
+    border-color: #3b4354;
+    transform: translateY(-2px);
+}
+
+.docker-image-icon {
+    font-size: 28px;
+}
+
+.docker-image-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 0;
+}
+
+.docker-image-info strong {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.docker-image-info span {
+    color: #8f97a9;
+    font-size: 12px;
+}
+
+.docker-header > div:last-child {
+    display: flex;
+    gap: 10px;
+}
+
+.docker-create-form {
+    background: #12151d;
+    border: 1px solid #292f3d;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 25px;
+    max-width: 600px;
+}
+
+.docker-create-form h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+.docker-create-form input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+
+    background: #181c25;
+    border: 1px solid #303746;
+    color: white;
+
+    padding: 11px 12px;
+    border-radius: 8px;
+
+    margin-bottom: 10px;
+    outline: none;
+}
+
+.docker-create-form input:focus {
+    border-color: #59657a;
+}
+
+.docker-create-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.docker-create-actions button {
+    border: 1px solid #303746;
+    background: #202531;
+    color: white;
+    padding: 9px 14px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.docker-create-actions button:hover {
+    background: #2c3341;
+}

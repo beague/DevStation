@@ -1,0 +1,570 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    background: #0b0d12;
+    color: #ffffff;
+}
+
+
+/* =========================
+   APP
+========================= */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+    background: #0b0d12;
+}
+
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar {
+    width: 230px;
+    min-width: 230px;
+
+    height: 100vh;
+
+    background: #11141b;
+    border-right: 1px solid #242936;
+
+    padding: 22px 12px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+}
+
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    gap: 9px;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    padding: 8px 12px;
+
+    margin-bottom: 28px;
+
+    color: #f5f7fb;
+}
+
+
+/* NAV */
+
+nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+nav button,
+.settings {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    background: transparent;
+    border: 0;
+
+    color: #9da5b5;
+
+    padding: 11px 13px;
+
+    border-radius: 7px;
+
+    text-align: left;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+nav button:hover,
+.settings:hover {
+    background: #1b1f29;
+    color: #ffffff;
+}
+
+nav button.active {
+    background: #242936;
+    color: #ffffff;
+}
+
+
+/* SETTINGS */
+
+.settings {
+    margin-top: auto;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.content {
+    flex: 1;
+    min-width: 0;
+
+    padding: 32px 38px;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+header h1 {
+    margin: 0;
+
+    font-size: 30px;
+    font-weight: 700;
+}
+
+header p {
+    margin: 7px 0 0;
+
+    color: #8e96a6;
+
+    font-size: 14px;
+}
+
+
+/* STATUS */
+
+.status {
+    display: flex;
+    align-items: center;
+
+    background: #151922;
+
+    border: 1px solid #242936;
+
+    padding: 9px 13px;
+
+    border-radius: 20px;
+
+    color: #aeb5c3;
+
+    font-size: 13px;
+}
+
+.status span {
+    width: 7px;
+    height: 7px;
+
+    display: inline-block;
+
+    margin-right: 8px;
+
+    border-radius: 50%;
+
+    background: #35d07f;
+}
+
+
+/* =========================
+   DASHBOARD CARDS
+========================= */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    margin-top: 30px;
+}
+
+.card {
+    background: #14171f;
+
+    border: 1px solid #242936;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.card:hover {
+    border-color: #343b4a;
+
+    transform: translateY(-2px);
+}
+
+.card h3 {
+    margin: 0;
+
+    color: #aeb5c3;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.card strong {
+    display: block;
+
+    margin: 13px 0 7px;
+
+    font-size: 27px;
+}
+
+.card p {
+    margin: 0;
+
+    color: #727b8c;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   WELCOME
+========================= */
+
+.welcome {
+    margin-top: 20px;
+
+    padding: 28px;
+
+    background: #14171f;
+
+    border: 1px solid #242936;
+
+    border-radius: 10px;
+}
+
+.welcome h2 {
+    margin-top: 0;
+}
+
+.welcome p {
+    color: #8b93a3;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.create {
+    margin-top: 15px;
+
+    padding: 10px 16px;
+
+    border: 0;
+
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    color: #111318;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        opacity 0.15s ease,
+        transform 0.15s ease;
+}
+
+.create:hover {
+    opacity: 0.88;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-page {
+    width: 100%;
+}
+
+.projects-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+}
+
+.projects-header h1 {
+    margin: 0 0 5px;
+
+    font-size: 30px;
+}
+
+.projects-header p {
+    margin: 0;
+
+    color: #8f96a6;
+
+    font-size: 14px;
+}
+
+
+/* FORM */
+
+.project-form {
+    margin-top: 22px;
+
+    padding: 18px;
+
+    background: #14171f;
+
+    border: 1px solid #242936;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+}
+
+.project-form input,
+.project-form select {
+    flex: 1;
+
+    min-width: 180px;
+
+    background: #0d1016;
+
+    border: 1px solid #2b3140;
+
+    color: #ffffff;
+
+    padding: 11px 12px;
+
+    border-radius: 7px;
+
+    outline: none;
+
+    font-size: 14px;
+}
+
+.project-form input:focus,
+.project-form select:focus {
+    border-color: #596273;
+}
+
+
+/* PROJECT GRID */
+
+.projects-grid {
+    margin-top: 22px;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 15px;
+}
+
+.project-card {
+    position: relative;
+
+    background: #14171f;
+
+    border: 1px solid #242936;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        transform 0.2s ease,
+        background 0.2s ease;
+}
+
+.project-card:hover {
+    border-color: #3a4252;
+
+    background: #171a22;
+
+    transform: translateY(-2px);
+}
+
+.project-icon {
+    font-size: 30px;
+
+    margin-bottom: 13px;
+}
+
+.project-info h2 {
+    margin: 0;
+
+    font-size: 17px;
+}
+
+.project-info p {
+    margin: 7px 0 0;
+
+    color: #818999;
+
+    font-size: 13px;
+}
+
+
+/* DELETE */
+
+.delete {
+    position: absolute;
+
+    top: 13px;
+    right: 13px;
+
+    background: transparent;
+
+    border: 0;
+
+    color: #8b93a3;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    opacity: 0.5;
+
+    transition:
+        opacity 0.15s ease,
+        color 0.15s ease;
+}
+
+.delete:hover {
+    opacity: 1;
+
+    color: #ffffff;
+}
+
+
+/* EMPTY */
+
+.empty-projects {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 75px 20px;
+
+    background: #14171f;
+
+    border: 1px solid #242936;
+
+    border-radius: 10px;
+}
+
+.empty-projects div {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+.empty-projects h2 {
+    margin: 0 0 7px;
+}
+
+.empty-projects p {
+    margin: 0;
+
+    color: #808899;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1000px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .sidebar {
+        width: 190px;
+        min-width: 190px;
+    }
+
+    .content {
+        padding: 25px 20px;
+    }
+
+    .cards,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

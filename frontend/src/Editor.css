@@ -1,0 +1,578 @@
+/* =========================
+   DEVSTATION EDITOR
+========================= */
+
+.editor-page {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: #0d0f14;
+
+    color: #ffffff;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   EDITOR HEADER
+========================= */
+
+.editor-header {
+    height: 50px;
+    min-height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 15px;
+
+    background: #11141b;
+
+    border-bottom: 1px solid #252a35;
+}
+
+.editor-project-name {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    color: #dce1ea;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================
+   SAVE BUTTON
+========================= */
+
+.save-button {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 7px 12px;
+
+    border: 1px solid #303746;
+
+    border-radius: 6px;
+
+    background: #1b1f28;
+
+    color: #dce1ea;
+
+    cursor: pointer;
+
+    font-size: 13px;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease;
+}
+
+.save-button:hover:not(:disabled) {
+    background: #252b36;
+
+    border-color: #414959;
+}
+
+.save-button:disabled {
+    opacity: 0.45;
+
+    cursor: default;
+}
+
+
+/* =========================
+   MAIN EDITOR LAYOUT
+========================= */
+
+.editor-layout {
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   FILE EXPLORER
+========================= */
+
+.explorer {
+    width: 245px;
+    min-width: 245px;
+
+    height: 100%;
+
+    background: #11141b;
+
+    border-right: 1px solid #252a35;
+
+    overflow-y: auto;
+}
+
+.explorer-title {
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 14px;
+
+    color: #858d9d;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.5px;
+
+    border-bottom: 1px solid #1e232d;
+}
+
+.files {
+    padding: 8px 6px;
+}
+
+
+/* FILE / FOLDER */
+
+.file,
+.folder {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    padding: 6px 9px;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: transparent;
+
+    color: #b9c0cc;
+
+    text-align: left;
+
+    font-family: inherit;
+
+    font-size: 13px;
+}
+
+.file {
+    cursor: pointer;
+}
+
+.file:hover {
+    background: #1d222c;
+
+    color: #ffffff;
+}
+
+.folder {
+    cursor: default;
+
+    font-weight: 500;
+}
+
+.folder-children {
+    padding-left: 15px;
+}
+
+
+/* =========================
+   CODE AREA
+========================= */
+
+.code-area {
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #0d0f14;
+}
+
+
+/* =========================
+   FILE TAB
+========================= */
+
+.file-tab {
+    height: 38px;
+    min-height: 38px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 15px;
+
+    background: #151820;
+
+    border-bottom: 1px solid #252a35;
+
+    color: #d4d9e2;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   MONACO
+========================= */
+
+.code-area .monaco-editor {
+    width: 100% !important;
+}
+
+
+/* =========================
+   EMPTY EDITOR
+========================= */
+
+.no-file {
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    color: #71798a;
+}
+
+.no-file div {
+    font-size: 50px;
+
+    margin-bottom: 10px;
+
+    opacity: 0.7;
+}
+
+.no-file h2 {
+    margin: 0 0 7px;
+
+    color: #d7dce5;
+
+    font-size: 18px;
+}
+
+.no-file p {
+    margin: 0;
+
+    color: #71798a;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+.explorer::-webkit-scrollbar {
+    width: 7px;
+}
+
+.explorer::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.explorer::-webkit-scrollbar-thumb {
+    background: #303642;
+
+    border-radius: 10px;
+}
+
+.explorer::-webkit-scrollbar-thumb:hover {
+    background: #414958;
+}
+
+/* =========================
+   EDITOR ACTIONS
+========================= */
+
+.editor-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* =========================
+   NEW FILE BUTTON
+========================= */
+
+.new-file-button {
+    padding: 7px 12px;
+
+    border: 1px solid #303746;
+    border-radius: 6px;
+
+    background: #1b1f28;
+
+    color: #dce1ea;
+
+    cursor: pointer;
+
+    font-size: 13px;
+}
+
+.new-file-button:hover {
+    background: #252b36;
+}
+
+
+/* =========================
+   EXPLORER HEADER
+========================= */
+
+.explorer-title {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+.explorer-add {
+    border: 0;
+
+    background: transparent;
+
+    color: #8f97a8;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.explorer-add:hover {
+    color: white;
+}
+
+
+/* =========================
+   NEW FILE FORM
+========================= */
+
+.new-file-form {
+    padding: 8px;
+
+    border-bottom: 1px solid #242a35;
+}
+
+.new-file-form input {
+    width: 100%;
+
+    padding: 8px 9px;
+
+    background: #0c0f14;
+
+    border: 1px solid #303746;
+
+    border-radius: 5px;
+
+    color: white;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+.new-file-form input:focus {
+    border-color: #596273;
+}
+
+.new-file-buttons {
+    display: flex;
+
+    gap: 5px;
+
+    margin-top: 6px;
+}
+
+.new-file-buttons button {
+    flex: 1;
+
+    padding: 6px;
+
+    border: 0;
+
+    border-radius: 5px;
+
+    background: #242936;
+
+    color: #dce1ea;
+
+    cursor: pointer;
+
+    font-size: 11px;
+}
+
+.new-file-buttons button:hover {
+    background: #303746;
+}
+
+
+/* =========================
+   ACTIVE FILE
+========================= */
+
+.file-active {
+    background: #242936 !important;
+
+    color: #ffffff !important;
+}
+
+
+/* =========================
+   TABS
+========================= */
+
+.editor-tabs {
+    height: 38px;
+    min-height: 38px;
+
+    display: flex;
+
+    align-items: stretch;
+
+    background: #11141b;
+
+    border-bottom: 1px solid #252a35;
+
+    overflow-x: auto;
+}
+
+.editor-tab {
+    min-width: 130px;
+    max-width: 210px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    padding: 0 10px;
+
+    background: #151820;
+
+    border-right: 1px solid #252a35;
+
+    color: #858d9d;
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.editor-tab:hover {
+    background: #1b1f28;
+
+    color: #cfd4de;
+}
+
+.editor-tab.active {
+    background: #0d0f14;
+
+    color: #ffffff;
+
+    border-top: 2px solid #ffffff;
+}
+
+.editor-tab span {
+    overflow: hidden;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+}
+
+.editor-tab button {
+    border: 0;
+
+    background: transparent;
+
+    color: #737b8b;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    line-height: 1;
+}
+
+.editor-tab button:hover {
+    color: #ffffff;
+}
+
+
+/* =========================
+   MONACO CONTAINER
+========================= */
+
+.monaco-container {
+    flex: 1;
+
+    min-height: 0;
+
+    position: relative;
+}
+
+.context-menu {
+    position: fixed;
+    z-index: 9999;
+    min-width: 160px;
+    padding: 5px;
+    background: #181b23;
+    border: 1px solid #303542;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+}
+
+.context-menu button {
+    width: 100%;
+    padding: 8px 10px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #d7dbe5;
+    text-align: left;
+    cursor: pointer;
+}
+
+.context-menu button:hover {
+    background: #292e3b;
+}

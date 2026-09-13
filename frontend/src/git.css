@@ -1,0 +1,222 @@
+.git-page {
+    padding: 30px;
+    color: #ffffff;
+    min-height: 100%;
+    box-sizing: border-box;
+}
+
+.git-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.git-header h1 {
+    margin: 0;
+    font-size: 30px;
+}
+
+.git-header p {
+    margin-top: 8px;
+    color: #8b92a5;
+}
+
+.git-header button,
+.git-project button,
+.git-init button,
+.git-commit button {
+    border: 1px solid #303746;
+    background: #202531;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.git-header button:hover,
+.git-project button:hover,
+.git-init button:hover,
+.git-commit button:hover {
+    background: #2c3341;
+}
+
+.git-project,
+.git-section,
+.git-init {
+    background: #12151d;
+    border: 1px solid #252a36;
+    border-radius: 14px;
+    padding: 22px;
+    margin-bottom: 20px;
+}
+
+.git-project h2,
+.git-section h2,
+.git-init h2 {
+    margin-top: 0;
+}
+
+.git-path,
+.git-commit {
+    display: flex;
+    gap: 10px;
+}
+
+.git-path input,
+.git-commit input {
+    flex: 1;
+    background: #181c25;
+    border: 1px solid #303746;
+    color: white;
+    padding: 11px 12px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.git-path input:focus,
+.git-commit input:focus {
+    border-color: #59657a;
+}
+
+.git-status {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.git-status-card {
+    background: #12151d;
+    border: 1px solid #252a36;
+    border-radius: 14px;
+    padding: 20px;
+}
+
+.git-status-card span {
+    display: block;
+    color: #8b92a5;
+    margin-bottom: 10px;
+}
+
+.git-status-card strong {
+    font-size: 22px;
+}
+
+.git-init p,
+.git-empty {
+    color: #8b92a5;
+}
+
+.git-init button {
+    margin-top: 10px;
+}
+
+.git-changes {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.git-change {
+    background: #181c25;
+    border: 1px solid #292f3d;
+    padding: 10px 12px;
+    border-radius: 7px;
+    font-family: monospace;
+    color: #c7cbd5;
+}
+
+.git-commit {
+    margin-top: 15px;
+}
+
+.git-commits {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.git-commit-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #181c25;
+    border: 1px solid #292f3d;
+    padding: 14px;
+    border-radius: 9px;
+}
+
+.git-commit-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.git-commit-item span {
+    color: #8b92a5;
+    font-size: 13px;
+}
+
+.git-commit-item code {
+    color: #9ba3b5;
+}
+
+@media (max-width: 700px) {
+    .git-page {
+        padding: 18px;
+    }
+
+    .git-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .git-status {
+        grid-template-columns: 1fr;
+    }
+
+    .git-path,
+    .git-commit {
+        flex-direction: column;
+    }
+
+    .git-commit-item {
+        align-items: flex-start;
+        gap: 10px;
+        flex-direction: column;
+    }
+}
+
+.git-sync {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.git-sync button {
+    border: 1px solid #303746;
+    background: #202531;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.git-sync button:hover {
+    background: #2c3341;
+}
+
+.git-remote {
+    background: #181c25;
+    border: 1px solid #292f3d;
+    border-radius: 8px;
+    padding: 13px;
+    overflow-x: auto;
+}
+
+.git-remote code {
+    color: #c7cbd5;
+    font-size: 13px;
+}
