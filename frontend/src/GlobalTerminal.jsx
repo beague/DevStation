@@ -46,7 +46,7 @@ function GlobalTerminal() {
 
         try {
             const response = await fetch(
-                "${import.meta.env.VITE_API_URL}/api/terminal/execute",
+                `${import.meta.env.VITE_API_URL}/api/terminal/execute`,
                 {
                     method: "POST",
                     headers: {

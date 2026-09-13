@@ -94,7 +94,7 @@ setRemote(remoteData.remote || "");
 
         try {
             const response = await fetch(
-                "${import.meta.env.VITE_API_URL}/api/git/init",
+                `${import.meta.env.VITE_API_URL}/api/git/init`,
                 {
                     method: "POST",
                     headers: {
@@ -144,7 +144,7 @@ setRemote(remoteData.remote || "");
 
         try {
             const response = await fetch(
-                "${import.meta.env.VITE_API_URL}/api/git/commit",
+                `${import.meta.env.VITE_API_URL}/api/git/commit`,
                 {
                     method: "POST",
                     headers: {
@@ -379,7 +379,7 @@ setRemote(remoteData.remote || "");
             onClick={async () => {
                 try {
                     const response = await fetch(
-                        "${import.meta.env.VITE_API_URL}/api/git/pull",
+                        `${import.meta.env.VITE_API_URL}/api/git/pull`,
                         {
                             method: "POST",
                             headers: {
@@ -464,7 +464,7 @@ setRemote(remoteData.remote || "");
                         try {
                             const response =
                                 await fetch(
-                                    "${import.meta.env.VITE_API_URL}/api/git/remote",
+                                    `${import.meta.env.VITE_API_URL}/api/git/remote`,
                                     {
                                         method: "POST",
                                         headers: {
@@ -512,7 +512,7 @@ setRemote(remoteData.remote || "");
             onClick={async () => {
                 try {
                     const response = await fetch(
-                        "${import.meta.env.VITE_API_URL}/api/git/push",
+                        `${import.meta.env.VITE_API_URL}/api/git/push`,
                         {
                             method: "POST",
                             headers: {
