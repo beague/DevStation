@@ -28,7 +28,7 @@ const [columns, setColumns] = useState([
     async function loadTables() {
         try {
             const response = await fetch(
-                "http://localhost:3001/api/database/tables"
+                `${import.meta.env.VITE_API_URL}/api/database/tables`
             );
 
             const data = await response.json();
@@ -53,7 +53,7 @@ const [columns, setColumns] = useState([
     async function loadTable(name) {
         try {
             const response = await fetch(
-                `http://localhost:3001/api/database/table/${encodeURIComponent(
+                `${import.meta.env.VITE_API_URL}/api/database/table/${encodeURIComponent(
                     name
                 )}`
             );
@@ -87,7 +87,7 @@ const [columns, setColumns] = useState([
 
     try {
         const response = await fetch(
-            "http://localhost:3001/api/database/table",
+            `${import.meta.env.VITE_API_URL}/api/database/table`,
             {
                 method: "POST",
                 headers: {
@@ -138,7 +138,7 @@ const [columns, setColumns] = useState([
 
         try {
             const response = await fetch(
-                "http://localhost:3001/api/database/query",
+                `${import.meta.env.VITE_API_URL}/api/database/query`,
                 {
                     method: "POST",
                     headers: {
@@ -583,7 +583,7 @@ const [columns, setColumns] = useState([
 
             try {
                 const response = await fetch(
-                    `http://localhost:3001/api/database/table/${encodeURIComponent(
+                    `${import.meta.env.VITE_API_URL}/api/database/table/${encodeURIComponent(
                         selectedTable
                     )}`,
                     {

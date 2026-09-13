@@ -24,7 +24,7 @@ function Git() {
 
         try {
             const statusResponse = await fetch(
-                `http://localhost:3001/api/git/status?path=${encodeURIComponent(
+                `${import.meta.env.VITE_API_URL}/api/git/status?path=${encodeURIComponent(
                     projectPath
                 )}`
             );
@@ -42,7 +42,7 @@ function Git() {
             if (statusData.isRepository) {
                 const commitsResponse =
                     await fetch(
-                        `http://localhost:3001/api/git/commits?path=${encodeURIComponent(
+                        `${import.meta.env.VITE_API_URL}/api/git/commits?path=${encodeURIComponent(
                             projectPath
                         )}`
                     );
@@ -67,7 +67,7 @@ function Git() {
         }
 
         const remoteResponse = await fetch(
-    `http://localhost:3001/api/git/remote?path=${encodeURIComponent(
+    `${import.meta.env.VITE_API_URL}/api/git/remote?path=${encodeURIComponent(
         projectPath
     )}`
 );
@@ -94,7 +94,7 @@ setRemote(remoteData.remote || "");
 
         try {
             const response = await fetch(
-                "http://localhost:3001/api/git/init",
+                "${import.meta.env.VITE_API_URL}/api/git/init",
                 {
                     method: "POST",
                     headers: {
@@ -144,7 +144,7 @@ setRemote(remoteData.remote || "");
 
         try {
             const response = await fetch(
-                "http://localhost:3001/api/git/commit",
+                "${import.meta.env.VITE_API_URL}/api/git/commit",
                 {
                     method: "POST",
                     headers: {
@@ -379,7 +379,7 @@ setRemote(remoteData.remote || "");
             onClick={async () => {
                 try {
                     const response = await fetch(
-                        "http://localhost:3001/api/git/pull",
+                        "${import.meta.env.VITE_API_URL}/api/git/pull",
                         {
                             method: "POST",
                             headers: {
@@ -464,7 +464,7 @@ setRemote(remoteData.remote || "");
                         try {
                             const response =
                                 await fetch(
-                                    "http://localhost:3001/api/git/remote",
+                                    "${import.meta.env.VITE_API_URL}/api/git/remote",
                                     {
                                         method: "POST",
                                         headers: {
@@ -512,7 +512,7 @@ setRemote(remoteData.remote || "");
             onClick={async () => {
                 try {
                     const response = await fetch(
-                        "http://localhost:3001/api/git/push",
+                        "${import.meta.env.VITE_API_URL}/api/git/push",
                         {
                             method: "POST",
                             headers: {

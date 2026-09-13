@@ -26,7 +26,7 @@ function Docker() {
     async function loadContainers() {
         try {
             const response = await fetch(
-                "http://localhost:3001/api/docker/containers"
+                `${import.meta.env.VITE_API_URL}/api/docker/containers`
             );
 
             const data = await response.json();
@@ -55,7 +55,7 @@ function Docker() {
     async function loadImages() {
         try {
             const response = await fetch(
-                "http://localhost:3001/api/docker/images"
+                `${import.meta.env.VITE_API_URL}/api/docker/images`
             );
 
             const data = await response.json();
@@ -105,7 +105,7 @@ function Docker() {
     async function containerAction(id, action) {
         try {
             const response = await fetch(
-                `http://localhost:3001/api/docker/${id}/${action}`,
+                `${import.meta.env.VITE_API_URL}/api/docker/${id}/${action}`,
                 {
                     method: "POST"
                 }
@@ -142,7 +142,7 @@ function Docker() {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/docker/${id}`,
+                `${import.meta.env.VITE_API_URL}/api/docker/${id}`,
                 {
                     method: "DELETE"
                 }
@@ -185,7 +185,7 @@ function Docker() {
 
         try {
             const response = await fetch(
-                "http://localhost:3001/api/docker/containers",
+                `${import.meta.env.VITE_API_URL}/api/docker/containers`,
                 {
                     method: "POST",
                     headers: {

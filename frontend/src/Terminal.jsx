@@ -33,7 +33,7 @@ function Terminal() {
 
         try {
             const response = await fetch(
-                "http://localhost:3001/api/terminal/execute",
+                "${import.meta.env.VITE_API_URL}/api/terminal/execute",
                 {
                     method: "POST",
                     headers: {

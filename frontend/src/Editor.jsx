@@ -104,7 +104,7 @@ function DevEditor({ project }) {
     async function loadFiles() {
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/files`
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/files`
             );
 
             const data = await response.json();
@@ -135,7 +135,7 @@ function DevEditor({ project }) {
     async function openFile(file) {
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/file?path=${encodeURIComponent(
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/file?path=${encodeURIComponent(
                     file.path
                 )}`
             );
@@ -238,7 +238,7 @@ function DevEditor({ project }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/file`,
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/file`,
                 {
                     method: "PUT",
                     headers: {
@@ -336,7 +336,7 @@ function DevEditor({ project }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/file`,
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/file`,
                 {
                     method: "POST",
                     headers: {
@@ -392,7 +392,7 @@ function DevEditor({ project }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/folder`,
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/folder`,
                 {
                     method: "POST",
                     headers: {
@@ -447,7 +447,7 @@ function DevEditor({ project }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/file`,
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/file`,
                 {
                     method: "DELETE",
                     headers: {
@@ -521,7 +521,7 @@ function DevEditor({ project }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/folder`,
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/folder`,
                 {
                     method: "DELETE",
                     headers: {
@@ -634,7 +634,7 @@ function DevEditor({ project }) {
 
         try {
             const response = await fetch(
-                `http://localhost:3001/api/projects/${project.id}/file/rename`,
+                `${import.meta.env.VITE_API_URL}/api/projects/${project.id}/file/rename`,
                 {
                     method: "PUT",
                     headers: {

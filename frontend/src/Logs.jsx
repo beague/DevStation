@@ -9,7 +9,7 @@ function Logs() {
     const loadLogs = async () => {
         try {
             const response = await fetch(
-                "http://localhost:3001/api/logs"
+                "${import.meta.env.VITE_API_URL}/api/logs"
             );
 
             if (!response.ok) {
@@ -59,7 +59,7 @@ function Logs() {
     const clearLogs = async () => {
         try {
             const response = await fetch(
-                "http://localhost:3001/api/logs",
+                "${import.meta.env.VITE_API_URL}/api/logs",
                 {
                     method: "DELETE"
                 }

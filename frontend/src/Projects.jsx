@@ -11,7 +11,7 @@ function Projects() {
 
     const loadProjects = async () => {
         try {
-            const response = await fetch("http://localhost:3001/api/projects");
+            const response = await fetch("${import.meta.env.VITE_API_URL}/api/projects");
             const data = await response.json();
             setProjects(data);
         } catch (error) {
@@ -30,7 +30,7 @@ function Projects() {
 
         try {
             const response = await fetch(
-                "http://localhost:3001/api/projects",
+                "${import.meta.env.VITE_API_URL}/api/projects",
                 {
                     method: "POST",
                     headers: {
@@ -61,7 +61,7 @@ function Projects() {
 
     const deleteProject = async (id) => {
         try {
-            await fetch(`http://localhost:3001/api/projects/${id}`, {
+            await fetch(`${import.meta.env.VITE_API_URL}/api/projects/${id}`, {
                 method: "DELETE",
             });
 

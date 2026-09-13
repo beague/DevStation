@@ -20,7 +20,7 @@ function App() {
     // =====================================================
 
     useEffect(() => {
-        fetch("http://localhost:3001/api/status")
+        fetch(`${import.meta.env.VITE_API_URL}/api/status`)
             .then((response) => response.json())
             .then((data) => {
                 setBackendStatus(data.status);
